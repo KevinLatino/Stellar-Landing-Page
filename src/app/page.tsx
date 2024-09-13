@@ -65,12 +65,12 @@ export default function Home() {
         {/* future computer */}
       </div>
     </div>
-    <section className="features flex w-full pt-40 lg:pt-56 2xl:pt-96 ">
-        <article className="flex flex-col gap-4 justify-center w-1/2 h-1/2 pl-4 pt-48 text-white">
+    <section className="features px-6 flex w-full pt-40 lg:pt-56 2xl:pt-96 ">
+        <article className="flex flex-col gap-4 w-1/2 pl-4 pt-36 text-white">
           <h2 className="text-5xl">
             Organiza tus días de la mejor manera
           </h2>
-          <ul className="flex flex-col justify-center">
+          <ul className="flex flex-col gap-3">
             {
               features.map((feature, index) => (
                 <li key={index} className="flex pl-20 items-center gap-2">
@@ -81,14 +81,28 @@ export default function Home() {
             }
           </ul>
         </article>
-        <div className="flex w-1/2 h-1/2 mb-96">
+        <div className="hidden md:flex w-1/2 mb-96">
           <img src={Resource.src} alt="" />
         </div>
     </section>
-    <section className="p-20">
+    <section className="p-20 flex flex-col gap-6">
       <h2 className="text-4xl">
         <span className="font-bold">Aprende</span> sobre los módulos más importantes para mejorar tu productividad.
       </h2>
+      <ul className="flex flex-wrap justify-between gap-x-40">
+        {
+          modules.map((module, index) => (
+            <li key={index} className="flex flex-col justify-start w-[421px]">
+              <h3 className="text-2xl border-l-2 border-stellar-grey font-bold">
+                {module.title}
+              </h3>
+              <p className="text-lg">
+                {module.description}
+              </p>
+            </li>
+          ))
+        }
+        </ul>
     </section>
     </>
 
