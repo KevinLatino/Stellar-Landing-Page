@@ -66,23 +66,28 @@ export default function Home() {
       </div>
     </div>
     <section className="features px-6 flex w-full pt-40 lg:pt-56 2xl:pt-96 ">
-        <article className="flex flex-col gap-4 w-1/2 pl-4 pt-36 text-white">
-          <h2 className="text-5xl">
+        <article className="flex flex-col items-center gap-4 md:w-1/2 pl-4 md:pt-40 text-white">
+          <h2 className=" text-3xl md:text-5xl">
             Organiza tus días de la mejor manera
           </h2>
           <ul className="flex flex-col gap-3">
             {
               features.map((feature, index) => (
                 <li key={index} className="flex pl-20 items-center gap-2">
-                  <CheckCircle size={40} />
+                  <div className="hidden md:flex">
+                    <CheckCircle size={40} />
+                  </div>
+                  <div className="flex md:hidden">
+                    <CheckCircle size={20} />
+                  </div>
                   <p className="text-xl lg:text-2xl">{feature.title}</p >
                 </li>
               ))
             }
           </ul>
         </article>
-        <div className="hidden md:flex w-1/2 mb-96">
-          <img src={Resource.src} alt="" />
+        <div className="w-0 md:w-1/2 mb-96">
+          <img className="hidden md:flex" src={Resource.src} alt="" />
         </div>
     </section>
     <section className="p-20 flex flex-col gap-6">
