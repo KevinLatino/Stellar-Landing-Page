@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </section>
       <section className="p-20 flex flex-col gap-6">
-        <h2 className="text-3xl text-center font-medium">
+        <h2 className="text-3xl text-center font-medium text-strong-blue">
           <strong className="text-light-blue">Aprende</strong> sobre los módulos más importantes para mejorar tu productividad.
         </h2>
         <ul className="flex flex-wrap gap-x-20 gap-y-14 mt-10 justify-center">
@@ -105,7 +105,7 @@ export default function Home() {
               key={index}
               className={`border-l-4  pl-4 max-w-xl ${module.borderColor}`} // Limita el ancho
             >
-              <h3 className="text-xl font-semibold">{module.title}</h3>
+              <h3 className="text-xl text-strong-blue font-semibold">{module.title}</h3>
               <p className="text-[17px] mt-1 text-gray-600">{module.description}</p>
             </li>
           ))}
