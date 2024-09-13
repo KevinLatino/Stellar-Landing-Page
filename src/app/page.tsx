@@ -19,7 +19,7 @@ export default function Home() {
             </span>
           </ShimmerButton>
         </div>
-        
+
       </div>
       <div className="flex w-[50%]">
         {/* future computer */}
