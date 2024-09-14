@@ -52,7 +52,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex animate-float">
-          <Image src={MockUp} alt="GitHub Logo" width={570} height={200} />
+          <Image draggable={false} src={MockUp} alt="GitHub Logo" width={570} height={200} />
         </div>
       </div>
 
@@ -65,7 +65,7 @@ export default function Home() {
           {modules.map((module, index) => (
             <li
               key={index}
-              className={`border-l-4  pl-4 max-w-xl ${module.borderColor}`}
+              className={`rounded-md border-l-4  pl-4 max-w-xl ${module.borderColor}`}
             >
               <h3 className="text-xl text-strong-blue font-semibold">
                 {module.title}
