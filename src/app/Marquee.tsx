@@ -5,42 +5,42 @@ import { MarqueeInterface, ImgMarquee } from "@/interfaces/interfaces";
 
 const reviews: MarqueeInterface[] = [
   {
-    name: "Santiago",
+    name: "Santiago Marín",
     body: "Esta app me ayudó a organizarme y mejorar mis notas. ¡Es increíble",
     img: ImgMarquee.male,
   },
   {
-    name: "Viviana",
+    name: "Viviana Sánchez",
     body: "Aprendí a gestionar mis tareas sin estrés. ¡Ahora soy más productivo!",
     img: ImgMarquee.female,
   },
   {
-    name: "Kevin",
+    name: "Kevin Contreras",
     body: "Dejé de procrastinar y empecé a priorizar lo importante. ¡Gran cambio!",
     img: ImgMarquee.male,
   },
   {
-    name: "Nicole",
+    name: "Nicole Vargas",
     body: "Con esta app nunca más me pierdo una fecha importante. ¡Me encanta!",
     img: ImgMarquee.female,
   },
   {
-    name: "Gabriel",
+    name: "Gabriel Mena",
     body: "La app me ayudó a mejorar mi enfoque y ser más organizada. ¡Muy útil!",
     img: ImgMarquee.male,
   },
   {
-    name: "Sofía",
+    name: "Sofía Cascante",
     body: "Interfaz sumamente intuitiva, ¡me ayuda día a día!.",
     img: ImgMarquee.female,
   },
   {
-    name: "Sergio",
+    name: "Sergio Sánchez",
     body: "Con stellar ya no tengo problemas con los plazos de entrega",
     img: ImgMarquee.male
   },
   {
-    name: "Lucía",
+    name: "Lucía Villarreal",
     body: "Stellar ha ayudado a mi vida estudiantil de una manera sin igual",
     img: ImgMarquee.female 
   }
