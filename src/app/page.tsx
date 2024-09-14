@@ -1,11 +1,10 @@
 import { ModuleInterface, ModuleColor } from "@/interfaces/interfaces";
-import StellarResource from "@/assets/Stellar-Resource.svg";
+import StellarTaks from '@/assets/Tasks.png'
 import Image from "next/image";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { MarqueeDemo } from "./Marquee";
 import MockUp from "../assets/macbook.svg";
 import TerminalComponent from "@/components/TerminalComponent";
-import Proof from "@/assets/prood.jpg"
 
 export default function Home() {
 
@@ -37,7 +36,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row w-full mt-18 justify-evenly items-center">
+      <section className="flex flex-col md:flex-row w-full mt-18 justify-evenly items-center">
         <div className="flex w-[40%] flex-col gap-7">
           <h1 className="text-strong-blue  font-medium text-3xl text-center">
             Con <strong className="text-light-blue">Stellar</strong> ¡Nunca
@@ -56,7 +55,33 @@ export default function Home() {
         <div className="flex animate-float">
           <Image draggable={false} src={MockUp} alt="GitHub Logo" width={520} height={200} />
         </div>
-      </div>
+      </section>
+
+      <section className="mt-[10rem] flex flex-col md:flex-row w-full mt-18 justify-evenly items-center">
+        <div className="flex w-[40%] flex-col gap-7">
+          <TerminalComponent>
+            <Image
+              src={StellarTaks}
+              draggable={false}
+              alt="Stellar Tasks"
+              width={520}
+              height={200}
+            />
+          </TerminalComponent>
+        </div>
+        <div className="flex flex-col gap-4">
+          <text className="text-strong-blue  font-medium text-2xl text-center">
+            <strong className="text-light-blue">Clasifica</strong> tus
+            tareas según su prioridad:
+          </text>
+            <ul className="text-lg font-medium">
+              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
+              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
+              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
+            </ul>
+        </div>
+      </section>
+
 
       <section className="mt-[6rem] flex flex-col gap-6">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
@@ -89,12 +114,6 @@ export default function Home() {
           <MarqueeDemo />
         </article>
       </section>
-
-          <div className="flex justify-center">
-          <TerminalComponent>
-      <Image src={Proof} height={700} width={700} alt="proof"/>
-    </TerminalComponent>
-          </div>
     </>
   );
 }
