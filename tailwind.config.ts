@@ -50,7 +50,9 @@ const config: Config = {
         slide: "slide var(--speed) ease-in-out infinite alternate",
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        float: "float 3s ease-in-out infinite", // Añadir animación float
       },
+
       keyframes: {
         marquee: {
           from: { transform: "translateX(0)" },
@@ -79,9 +81,13 @@ const config: Config = {
             transform: "translate(calc(100cqw - 100%), 0)",
           },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }, // Añadir keyframes de flotación
       },
     },
-  }
+  },
 }
 
-export default config
+export default config;
