@@ -95,10 +95,10 @@ export default function Home() {
         Con           <strong className="text-light-blue">Stellar</strong> puedes :
       </h2>
 
-      <section className="flex flex-col md:flex-row w-full justify-between items-center md:px-40">
+      <section className="flex flex-col md:flex-row w-full justify-between items-center md:px-32 p-3 mt-10">
       <div className="flex flex-col gap-4">
           <text className="text-strong-blue  font-medium text-3xl text-center">
-            <strong className="text-light-blue">Clasifica</strong> tus
+            <strong className="text-light-blue">Clasificar</strong> tus
             tareas según su prioridad:
           </text>
             <ul className="text-xl font-medium">
@@ -107,7 +107,7 @@ export default function Home() {
               <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
             </ul>
         </div>
-        <div className="flex w-[40%] flex-col gap-7">
+        <div className="flex w-[50%] flex-col gap-7">
           <TerminalComponent>
             <Image
               src={StellarTaks}
@@ -121,8 +121,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row w-full justify-between items-center lg:px-40 gap-6">
-      <div className="hidden md:flex w-[40%] flex-col gap-7">
+      <section className="flex flex-col md:flex-row w-full justify-between items-center lg:px-32 p-3 mt-10">
+      <div className="hidden md:flex w-[50%] flex-col gap-7">
           <TerminalComponent>
             <Image
               src={StellarCalendar}
@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       <div className="flex flex-col gap-4">
           <text className="text-strong-blue  font-medium text-3xl text-center">
-            <strong className="text-light-blue">Organiza</strong> tus
+            <strong className="text-light-blue">Organizar</strong> tus
             semanas, según las tareas
           </text>
             <ul className="text-xl font-medium">
@@ -159,10 +159,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row w-full justify-between items-center px-3 md:px-40">
+      <section className="flex flex-col md:flex-row w-full justify-between items-center px-3 md:px-32 p-3 mt-10">
       <div className="flex flex-col gap-4">
           <text className="text-strong-blue  font-medium text-3xl text-center">
-            <strong className="text-light-blue">Obten</strong> tus
+            <strong className="text-light-blue">Obtener </strong>
             medallas, con progreso
           </text>
             <ul className="text-xl font-medium">
@@ -171,7 +171,7 @@ export default function Home() {
               <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
             </ul>
         </div>
-        <div className="flex w-[40%] flex-col gap-7">
+        <div className="flex w-[50%] flex-col gap-7">
           <TerminalComponent>
             <Image
               src={Medals}
