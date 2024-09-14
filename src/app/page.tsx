@@ -1,8 +1,8 @@
 import { ModuleInterface, ModuleColor } from '@/interfaces/interfaces'
-import StellarResource from '@/assets/Background4.svg'
+import StellarResource from '@/assets/Stellar-Resource.svg'
 import Image from 'next/image';
 import ShimmerButton from "@/components/magicui/shimmer-button";
-import "@/assets/styles/features.css";
+import { MarqueeDemo } from './Marquee';
 
 export default function Home() {
 
@@ -61,7 +61,7 @@ export default function Home() {
 
       <section className="mt-[6rem] flex flex-col gap-6">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
-          Aprende sobre los módulos más importantes para mejorar tu <strong className="text-light-blue">productividad.</strong>
+          ¡Aprende sobre los módulos más importantes para mejorar tu <strong className="text-light-blue">productividad</strong>!
         </h2>
         <ul className="flex flex-wrap gap-x-20 gap-y-14 mt-10 justify-center">
           {modules.map((module, index) => (
@@ -74,8 +74,15 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
 
-
+      <section className='mt-[6rem]'>
+        <h2 className="text-3xl text-center font-medium text-strong-blue">
+          Opiniones de estudiantes que han probado la versión beta de <strong className="text-light-blue">Stellar.</strong>
+        </h2>
+        <article>
+          <MarqueeDemo />
+        </article>
       </section>
     </>
 

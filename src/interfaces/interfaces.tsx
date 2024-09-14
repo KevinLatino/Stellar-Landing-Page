@@ -10,3 +10,9 @@ export interface ModuleInterface {
     description: string,
     borderColor: ModuleColor
 }
+
+export interface MarqueeInterface {
+    name: string,
+    body: string,
+    img: string
+}
