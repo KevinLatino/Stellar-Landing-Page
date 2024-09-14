@@ -80,7 +80,7 @@ export default function Home() {
 
       <section className="mt-[6rem]">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
-          Opiniones de estudiantes que han probado la versión beta de{" "}
+          <strong className="text-light-blue">Opiniones</strong> de estudiantes que han probado la versión beta de{" "}
           <strong className="text-light-blue">Stellar.</strong>
         </h2>
         <article>
