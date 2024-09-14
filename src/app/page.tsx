@@ -6,12 +6,11 @@ import { MarqueeDemo } from "./Marquee";
 import MockUp from "../assets/macbook.svg";
 
 export default function Home() {
-  
+
   const modules: ModuleInterface[] = [
     {
       title: "La matriz de Eisenhower",
-      description:
-        "Es un método importante debido a que te enseña a clasificar las tareas según su urgencia e importancia.",
+      description: "Es un método importante debido a que te enseña a clasificar las tareas según su urgencia e importancia.",
       borderColor: ModuleColor.yellow,
     },
     {
@@ -53,20 +52,20 @@ export default function Home() {
           </div>
         </div>
         <div className="flex animate-float">
-          <Image draggable={false} src={MockUp} alt="GitHub Logo" width={570} height={200} />
+          <Image draggable={false} src={MockUp} alt="GitHub Logo" width={520} height={200} />
         </div>
       </div>
 
       <section className="mt-[6rem] flex flex-col gap-6">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
-          ¡Aprende sobre los módulos más importantes para mejorar tu{" "}
+          ¡<strong className="text-light-blue">Aprende</strong> sobre los módulos más importantes para mejorar tu{" "}
           <strong className="text-light-blue">productividad</strong>!
         </h2>
         <ul className="flex flex-wrap gap-x-20 gap-y-14 mt-10 justify-center">
           {modules.map((module, index) => (
             <li
               key={index}
-              className={`rounded-md border-l-4  pl-4 max-w-xl ${module.borderColor}`}
+              className={` border-l-4  pl-4 max-w-xl ${module.borderColor}`}
             >
               <h3 className="text-xl text-strong-blue font-semibold">
                 {module.title}

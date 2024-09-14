@@ -1,38 +1,49 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
-import { MarqueeInterface } from "@/interfaces/interfaces";
+import { MarqueeInterface, ImgMarquee } from "@/interfaces/interfaces";
+
 
 const reviews: MarqueeInterface[] = [
   {
     name: "Santiago",
     body: "Esta app me ayudó a organizarme y mejorar mis notas. ¡Es increíble",
-    img: "https://avatar.vercel.sh/jack",
+    img: ImgMarquee.capBlue,
   },
   {
     name: "Gabriel",
     body: "Aprendí a gestionar mis tareas sin estrés. ¡Ahora soy más productivo!",
-    img: "https://avatar.vercel.sh/jill",
+    img: ImgMarquee.capLightGreen,
   },
   {
     name: "Kevin",
     body: "Dejé de procrastinar y empecé a priorizar lo importante. ¡Gran cambio!",
-    img: "https://avatar.vercel.sh/john",
+    img: ImgMarquee.capBlue,
   },
   {
     name: "Nicole",
     body: "Con esta app nunca más me pierdo una fecha importante. ¡Me encanta!",
-    img: "https://avatar.vercel.sh/jane",
+    img: ImgMarquee.capLightGreen,
   },
   {
     name: "Sofía",
     body: "La app me ayudó a mejorar mi enfoque y ser más organizada. ¡Muy útil!",
-    img: "https://avatar.vercel.sh/jenny",
+    img: ImgMarquee.capBlue,
   },
   {
     name: "Alejandro",
     body: "Interfaz sumamente intuitiva, ¡me ayuda día a día!.",
-    img: "https://avatar.vercel.sh/james",
+    img: ImgMarquee.capLightGreen,
   },
+  {
+    name: "Steven",
+    body: "Con stellar ya no tengo problemas con los plazos de entrega",
+    img: ImgMarquee.capBlue
+  },
+  {
+    name: "Sergio",
+    body: "Stellar ha ayudado a mi vida estudiantil de una manera sin igual",
+    img: ImgMarquee.capLightGreen 
+  }
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
