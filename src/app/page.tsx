@@ -3,8 +3,10 @@ import StellarTaks from '@/assets/Tasks.png'
 import Image from "next/image";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { MarqueeDemo } from "./Marquee";
-import MockUp from "../assets/macbook.svg";
 import TerminalComponent from "@/components/TerminalComponent";
+import MockUp from "@/assets/macbook.svg";
+import StellarCalendar from "@/assets/Calendar.png"
+import Medals from "@/assets/Medals.png"
 
 export default function Home() {
 
@@ -111,35 +113,75 @@ export default function Home() {
               src={StellarTaks}
               draggable={false}
               alt="Stellar Tasks"
-              width={520}
-              height={200}
+              width={800}
+              height={400}
+              className="rounded-xl"
             />
           </TerminalComponent>
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row w-full justify-between items-center md:px-40">
-      <div className="flex w-[40%] flex-col gap-7">
+      <section className="flex flex-col md:flex-row w-full justify-between items-center lg:px-40 gap-6">
+      <div className="hidden md:flex w-[40%] flex-col gap-7">
           <TerminalComponent>
             <Image
-              src={StellarTaks}
+              src={StellarCalendar}
               draggable={false}
-              alt="Stellar Tasks"
-              width={520}
-              height={200}
+              alt="Stellar Calendar"
+              width={800}
+              height={400}
+              className="rounded-xl"
             />
           </TerminalComponent>
         </div>
       <div className="flex flex-col gap-4">
           <text className="text-strong-blue  font-medium text-3xl text-center">
-            <strong className="text-light-blue">Clasifica</strong> tus
-            tareas según su prioridad:
+            <strong className="text-light-blue">Organiza</strong> tus
+            semanas, según las tareas
           </text>
             <ul className="text-xl font-medium">
               <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
               <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
               <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
             </ul>
+        </div>
+        <div className="flex md:hidden w-[40%] flex-col gap-7">
+          <TerminalComponent>
+            <Image
+              src={StellarCalendar}
+              draggable={false}
+              alt="Stellar Calendar"
+              width={800}
+              height={400}
+              className="rounded-xl"
+            />
+          </TerminalComponent>
+        </div>
+      </section>
+
+      <section className="flex flex-col md:flex-row w-full justify-between items-center px-3 md:px-40">
+      <div className="flex flex-col gap-4">
+          <text className="text-strong-blue  font-medium text-3xl text-center">
+            <strong className="text-light-blue">Obten</strong> tus
+            medallas, con progreso
+          </text>
+            <ul className="text-xl font-medium">
+              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
+              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
+              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
+            </ul>
+        </div>
+        <div className="flex w-[40%] flex-col gap-7">
+          <TerminalComponent>
+            <Image
+              src={Medals}
+              draggable={false}
+              alt="Stellar Tasks"
+              width={800}
+              height={400}
+              className="rounded-xl"
+            />
+          </TerminalComponent>
         </div>
       </section>
     </>
