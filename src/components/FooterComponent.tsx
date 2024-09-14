@@ -1,6 +1,6 @@
 import Image from 'next/image'; 
 import GithubLogo from '@/assets/github-dark.svg';
-import Logo from "../assets/StellarFullLogo-Over-Black.svg";
+import Logo from "../assets/StellarLogo-Over-Black.svg";
 import Link from 'next/link';
 
 export default function FooterComponent() {
