@@ -6,6 +6,7 @@ import { MarqueeDemo } from "./Marquee";
 import MockUp from "../assets/macbook.svg";
 
 export default function Home() {
+  
   const modules: ModuleInterface[] = [
     {
       title: "La matriz de Eisenhower",
