@@ -47,10 +47,10 @@ export default function NavBarComponent() {
         ))}
       </ul>
 
-      {/* Mobile Menu */}
+      {/* Full-Screen Mobile Menu - Slide from Right */}
       <ul
-        className={`absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-6 py-6 shadow-lg lg:hidden z-10 transition-opacity duration-300 ease-in-out ${
-          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed top-0 right-0 h-full w-full bg-white flex flex-col items-center gap-6 py-6 shadow-lg lg:hidden z-10 transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {navBarItems.map((item: string, index: number) => (

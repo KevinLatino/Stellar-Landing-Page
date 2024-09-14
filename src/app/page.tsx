@@ -57,32 +57,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-[10rem] flex flex-col md:flex-row w-full mt-18 justify-evenly items-center">
-        <div className="flex w-[40%] flex-col gap-7">
-          <TerminalComponent>
-            <Image
-              src={StellarTaks}
-              draggable={false}
-              alt="Stellar Tasks"
-              width={520}
-              height={200}
-            />
-          </TerminalComponent>
-        </div>
-        <div className="flex flex-col gap-4">
-          <text className="text-strong-blue  font-medium text-2xl text-center">
-            <strong className="text-light-blue">Clasifica</strong> tus
-            tareas según su prioridad:
-          </text>
-            <ul className="text-lg font-medium">
-              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
-            </ul>
-        </div>
-      </section>
-
-
       <section className="mt-[6rem] flex flex-col gap-6">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
           ¡<strong className="text-light-blue">Aprende</strong> sobre los módulos más importantes para mejorar tu{" "}
@@ -113,6 +87,60 @@ export default function Home() {
         <article>
           <MarqueeDemo />
         </article>
+      </section>
+
+      <h2 className="text-5xl text-center mb-10">
+        Con           <strong className="text-light-blue">Stellar</strong> puedes :
+      </h2>
+
+      <section className="flex flex-col md:flex-row w-full justify-between items-center md:px-40">
+      <div className="flex flex-col gap-4">
+          <text className="text-strong-blue  font-medium text-3xl text-center">
+            <strong className="text-light-blue">Clasifica</strong> tus
+            tareas según su prioridad:
+          </text>
+            <ul className="text-xl font-medium">
+              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
+              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
+              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
+            </ul>
+        </div>
+        <div className="flex w-[40%] flex-col gap-7">
+          <TerminalComponent>
+            <Image
+              src={StellarTaks}
+              draggable={false}
+              alt="Stellar Tasks"
+              width={520}
+              height={200}
+            />
+          </TerminalComponent>
+        </div>
+      </section>
+
+      <section className="flex flex-col md:flex-row w-full justify-between items-center md:px-40">
+      <div className="flex w-[40%] flex-col gap-7">
+          <TerminalComponent>
+            <Image
+              src={StellarTaks}
+              draggable={false}
+              alt="Stellar Tasks"
+              width={520}
+              height={200}
+            />
+          </TerminalComponent>
+        </div>
+      <div className="flex flex-col gap-4">
+          <text className="text-strong-blue  font-medium text-3xl text-center">
+            <strong className="text-light-blue">Clasifica</strong> tus
+            tareas según su prioridad:
+          </text>
+            <ul className="text-xl font-medium">
+              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
+              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
+              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
+            </ul>
+        </div>
       </section>
     </>
   );
