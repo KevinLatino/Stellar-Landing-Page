@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex w-full mt-18 justify-evenly items-center">
+      <div className="flex flex-col md:flex-row w-full mt-18 justify-evenly items-center">
         <div className="flex w-[40%] flex-col gap-7">
           <h1 className="text-strong-blue  font-medium text-3xl text-center">
             Con <strong className="text-light-blue">Stellar</strong> ¡Nunca

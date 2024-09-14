@@ -11,7 +11,7 @@ export default function NavBarComponent() {
     ];
 
     return (
-        <nav className="flex justify-between items-center">
+        <nav id='hero' className="flex justify-between items-center">
             <Image 
                 src={StellarLogo} 
                 alt="Stellar Logo" 
