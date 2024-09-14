@@ -1,31 +1,67 @@
-import Image from 'next/image'; // Importa el componente de Next.js
-import StellarLogo from '@/assets/Stellar-NavBar.svg';
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import StellarLogo from "@/assets/Stellar-NavBar.svg";
 
 export default function NavBarComponent() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    
-    const navBarItems: string[] = [
-        'Features',
-        'Planes',
-        'Nosotros'
-    ];
+  const navBarItems: string[] = ["Features", "Planes", "Nosotros"];
 
-    return (
-        <nav id='hero' className="flex justify-between items-center">
-            <Image 
-                src={StellarLogo} 
-                alt="Stellar Logo" 
-                width={290} 
-                height={40} 
-                className="p-8 cursor-pointer" 
-            />
-            <ul className="flex gap-8 p-14">
-                {navBarItems.map((item: string, index: number) => (
-                    <li key={index} className="text-strong-blue font-raleway text-[20px] font-medium cursor-pointer">
-                        {item}
-                    </li>
-                ))}
-            </ul>
-        </nav>
-    );
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <nav className="flex justify-between items-center p-4 relative">
+      <Image
+        src={StellarLogo}
+        alt="Stellar Logo"
+        width={290}
+        height={40}
+        className="p-4 cursor-pointer"
+      />
+
+      {/* Hamburger Menu Button */}
+      <button
+        className="block lg:hidden p-4 cursor-pointer z-20 transition-transform duration-300"
+        onClick={toggleMenu}
+      >
+        {isMenuOpen ? (
+          <X className="transition-transform duration-300 ease-in-out transform rotate-90" size={28} />
+        ) : (
+          <Menu className="transition-transform duration-300 ease-in-out" size={28} />
+        )}
+      </button>
+
+      {/* Desktop Menu */}
+      <ul className="hidden lg:flex gap-8 p-4">
+        {navBarItems.map((item: string, index: number) => (
+          <li
+            key={index}
+            className="text-strong-blue font-raleway text-[20px] font-medium cursor-pointer"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      {/* Mobile Menu */}
+      <ul
+        className={`absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-6 py-6 shadow-lg lg:hidden z-10 transition-opacity duration-300 ease-in-out ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {navBarItems.map((item: string, index: number) => (
+          <li
+            key={index}
+            className="text-strong-blue font-raleway text-[18px] font-medium cursor-pointer"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
 }

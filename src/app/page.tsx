@@ -92,7 +92,7 @@ export default function Home() {
 
           <div className="flex justify-center">
           <TerminalComponent>
-      <Image src={Proof} height={300} width={300} alt="proof"/>
+      <Image src={Proof} height={700} width={700} alt="proof"/>
     </TerminalComponent>
           </div>
     </>
