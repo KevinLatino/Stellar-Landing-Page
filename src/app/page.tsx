@@ -4,6 +4,8 @@ import Image from "next/image";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { MarqueeDemo } from "./Marquee";
 import MockUp from "../assets/macbook.svg";
+import TerminalComponent from "@/components/TerminalComponent";
+import Proof from "@/assets/prood.jpg"
 
 export default function Home() {
 
@@ -87,6 +89,12 @@ export default function Home() {
           <MarqueeDemo />
         </article>
       </section>
+
+          <div className="flex justify-center">
+          <TerminalComponent>
+      <Image src={Proof} height={300} width={300} alt="proof"/>
+    </TerminalComponent>
+          </div>
     </>
   );
 }

@@ -17,6 +17,7 @@ export default function FooterComponent() {
       <p className="mt-2 text-white">
         Developed by{' '}
         <a 
+          className="cursor-pointer"
           href="https://github.com/KevinLatino" 
           target="_blank" 
         >
@@ -24,6 +25,7 @@ export default function FooterComponent() {
         </a>{' '}
         and{' '}
         <a 
+          className="cursor-pointer"
           href="https://github.com/Villarley" 
           target="_blank" 
         >
