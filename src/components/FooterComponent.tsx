@@ -3,7 +3,7 @@ import GithubLogo from '@/assets/github-dark.svg';
 
 export default function FooterComponent() {
   return (
-    <footer className="w-full h-32 bg-gradient-to-r from-[#1C3676] to-[#3565DC] flex flex-col items-center justify-center">
+    <footer className="mt-[10rem] w-full h-32 bg-gradient-to-r from-[#1C3676] to-[#3565DC] flex flex-col items-center justify-center">
       <Image
         src={GithubLogo}
         alt="GitHub Logo"
