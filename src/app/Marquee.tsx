@@ -7,42 +7,42 @@ const reviews: MarqueeInterface[] = [
   {
     name: "Santiago",
     body: "Esta app me ayudó a organizarme y mejorar mis notas. ¡Es increíble",
-    img: ImgMarquee.capBlue,
+    img: ImgMarquee.male,
   },
   {
-    name: "Gabriel",
+    name: "Viviana",
     body: "Aprendí a gestionar mis tareas sin estrés. ¡Ahora soy más productivo!",
-    img: ImgMarquee.capLightGreen,
+    img: ImgMarquee.female,
   },
   {
     name: "Kevin",
     body: "Dejé de procrastinar y empecé a priorizar lo importante. ¡Gran cambio!",
-    img: ImgMarquee.capBlue,
+    img: ImgMarquee.male,
   },
   {
     name: "Nicole",
     body: "Con esta app nunca más me pierdo una fecha importante. ¡Me encanta!",
-    img: ImgMarquee.capLightGreen,
+    img: ImgMarquee.female,
+  },
+  {
+    name: "Gabriel",
+    body: "La app me ayudó a mejorar mi enfoque y ser más organizada. ¡Muy útil!",
+    img: ImgMarquee.male,
   },
   {
     name: "Sofía",
-    body: "La app me ayudó a mejorar mi enfoque y ser más organizada. ¡Muy útil!",
-    img: ImgMarquee.capBlue,
-  },
-  {
-    name: "Alejandro",
     body: "Interfaz sumamente intuitiva, ¡me ayuda día a día!.",
-    img: ImgMarquee.capLightGreen,
-  },
-  {
-    name: "Steven",
-    body: "Con stellar ya no tengo problemas con los plazos de entrega",
-    img: ImgMarquee.capBlue
+    img: ImgMarquee.female,
   },
   {
     name: "Sergio",
+    body: "Con stellar ya no tengo problemas con los plazos de entrega",
+    img: ImgMarquee.male
+  },
+  {
+    name: "Lucía",
     body: "Stellar ha ayudado a mi vida estudiantil de una manera sin igual",
-    img: ImgMarquee.capLightGreen 
+    img: ImgMarquee.female 
   }
 ];
 
@@ -65,9 +65,9 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full" width="36" height="34" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
+          <figcaption className="text-[16px] font-medium dark:text-white">
             {name}
           </figcaption>
         </div>

@@ -14,8 +14,8 @@ export interface ModuleInterface {
 
 
 export enum ImgMarquee {
-    capBlue = "https://github.com/user-attachments/assets/d871f8d7-c204-43e9-a07b-7dd48283cf61",
-    capLightGreen = "https://github.com/user-attachments/assets/b503ebfe-6814-4560-83d9-4997a6f74ed4"
+    male = "https://github.com/user-attachments/assets/00c5f17e-17f8-42a3-8e24-4783125216bb",
+    female = "https://github.com/user-attachments/assets/931ae195-52e4-42bd-90cf-99018b37034e"
 }
 export interface MarqueeInterface {
     name: string,
