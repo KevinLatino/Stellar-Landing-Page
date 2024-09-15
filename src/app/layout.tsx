@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import NavBarComponent from "@/components/NavBarComponent";
 import FooterComponent from "@/components/FooterComponent";
 import "./globals.css";
+import Stellar from "@/assets/StellarLogo-Over-Black.svg"
 
 export const metadata: Metadata = {
   title: "Stellar",
   description: "This is the landing page of Stellar",
+  icons: Stellar,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
