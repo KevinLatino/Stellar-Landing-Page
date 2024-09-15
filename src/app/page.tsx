@@ -105,10 +105,15 @@ export default function Home() {
                 <li key={i}>
                   {sentence}{' '}
                   <strong
-                    className={`text-${urgencyWord === 'Alta' ? 'light-red'
-                        : urgencyWord === 'Media' ? 'light-yellow'
-                         : urgencyWord === "Baja" ? 'light-green' : "light-blue"          
-                      }`}
+              className={
+                urgencyWord === "Alta"
+                  ? "text-light-red"
+                  : urgencyWord === "Media"
+                  ? "text-light-yellow"
+                  : urgencyWord === "Baja"
+                  ? "text-light-green"
+                  : "text-light-blue"
+              }
                   >
                     {urgencyWord}
                   </strong>
