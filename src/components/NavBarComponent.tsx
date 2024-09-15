@@ -1,67 +1,53 @@
 "use client";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
-import StellarLogo from "@/assets/Stellar-NavBar.svg";
+import StellarLogo from '@/assets/Stellar-NavBar.svg';
 
-export default function NavBarComponent() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const navItems = [
+  { title: "Módulos", label: "experiencia", url: "/#experiencia" },
+  { title: "Opiniones", label: "proyectos", url: "/#proyectos" },
+  { title: "Funcionalidades", label: "sobre", url: "/#sobre-mi" },
+  { title: "Contacto", label: "contacto", url: "latinokevin9@gmail.com" },
+];
 
-  const navBarItems: string[] = ["Features", "Planes", "Nosotros"];
+const NavBarComponent = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 0);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="flex justify-between items-center p-4 relative">
-      <Image
-        src={StellarLogo}
-        alt="Stellar Logo"
-        width={290}
-        height={40}
-        className="p-4 cursor-pointer"
-      />
-
-      {/* Hamburger Menu Button */}
-      <button
-        className="block lg:hidden p-4 cursor-pointer z-20 transition-transform duration-300"
-        onClick={toggleMenu}
+    <header className={`fixed top-0 z-10 w-full mx-auto ${isScrolled ? "mt-2" : "mt-4"}`}>
+      <nav
+        className={`flex items-center justify-center gap-[40rem] text-[16px] font-medium rounded-full 
+          ${isScrolled ? "gap-[1rem] px-3 text-gray-600 dark:text-gray-200 bg-white/50 shadow-lg ring-1 backdrop-blur ring-white/10" : ""}
+          max-w-xl mx-auto`}
       >
-        {isMenuOpen ? (
-          <X className="transition-transform duration-300 ease-in-out transform rotate-90" size={28} />
-        ) : (
-          <Menu className="transition-transform duration-300 ease-in-out" size={28} />
-        )}
-      </button>
+        <Image
+          src={StellarLogo}
+          alt="Logo"
+          className={`transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`} 
+        />
 
-      {/* Desktop Menu */}
-      <ul className="hidden lg:flex gap-8 p-4">
-        {navBarItems.map((item: string, index: number) => (
-          <li
-            key={index}
-            className="text-strong-blue font-raleway text-[20px] font-medium cursor-pointer"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-
-      {/* Full-Screen Mobile Menu - Slide from Right */}
-      <ul
-        className={`fixed top-0 right-0 h-full w-full bg-white flex flex-col items-center gap-6 py-6 shadow-lg lg:hidden z-10 transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {navBarItems.map((item: string, index: number) => (
-          <li
-            key={index}
-            className="text-strong-blue font-raleway text-[18px] font-medium cursor-pointer"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-    </nav>
+        <div className={`flex space-x-4 transition-all duration-200 ${isScrolled ? "text-sm" : "text-lg"}`}>
+          {navItems.map(({ title, label, url }) => (
+            <a
+              key={label}
+              className={`relative block px-2 py-2 ${isScrolled ? "hover:text-blue-500 dark:hover:text-blue-500" : "text-gray-600"}`}
+              aria-label={label}
+              href={url}
+            >
+              {title}
+            </a>
+          ))}
+        </div>
+      </nav>
+    </header>
   );
-}
+};
+
+export default NavBarComponent;
