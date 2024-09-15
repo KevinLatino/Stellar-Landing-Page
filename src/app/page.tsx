@@ -107,8 +107,7 @@ export default function Home() {
                   <strong
                     className={`text-${urgencyWord === 'Alta' ? 'light-red'
                         : urgencyWord === 'Media' ? 'light-yellow'
-                         : urgencyWord === "Baja" ? 'light-green' : "light-blue"
-                          
+                         : urgencyWord === "Baja" ? 'light-green' : "light-blue"          
                       }`}
                   >
                     {urgencyWord}
