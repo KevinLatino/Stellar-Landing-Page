@@ -1,12 +1,13 @@
-import { ModuleInterface, ModuleColor } from "@/interfaces/interfaces";
+import { ModuleInterface, ModuleColor, FeatureProps } from "@/interfaces/interfaces";
 import StellarTaks from '@/assets/Tasks.png'
 import Image from "next/image";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { MarqueeDemo } from "./Marquee";
-import TerminalComponent from "@/components/TerminalComponent";
 import MockUp from "@/assets/macbook.svg";
 import StellarCalendar from "@/assets/Calendar.png"
-import Medals from "@/assets/Medals.png"
+import Medals from "@/assets/Medals.png";
+import FeatureComponent from "@/components/FeatureComponent";
+
 
 export default function Home() {
 
@@ -33,6 +34,39 @@ export default function Home() {
       description:
         "Nos enseña que establecer metas claras de manera diaria es fundamental para mantener la motivación.",
       borderColor: ModuleColor.purple,
+    },
+  ];
+
+  const features = [
+    {
+      side: 'right',
+      title: 'Clasificar tus tareas según su prioridad:',
+      description: [
+        'Tareas con urgencia Alta',
+        'Tareas con urgencia Media',
+        'Tareas con urgencia Baja',
+      ],
+      image: StellarTaks,
+    },
+    { 
+      side: 'left',
+      title: 'Organizar tus semanas, según las tareas',
+      description: [
+        'Tareas con urgencia Alta',
+        'Tareas con urgencia Media',
+        'Tareas con urgencia Baja',
+      ],
+      image: StellarCalendar,
+    },
+    {
+      side: 'right',
+      title: 'Obtener medallas, con progreso',
+      description: [
+        'Tareas con urgencia Alta',
+        'Tareas con urgencia Media',
+        'Tareas con urgencia Baja',
+      ],
+      image: Medals,
     },
   ];
 
@@ -95,95 +129,38 @@ export default function Home() {
         Con           <strong className="text-light-blue">Stellar</strong> puedes :
       </h2>
 
-      <section className="flex flex-col md:flex-row w-full justify-between items-center md:px-32 p-3 mt-10">
-      <div className="flex flex-col gap-4">
-          <text className="text-strong-blue  font-medium text-3xl text-center">
-            <strong className="text-light-blue">Clasificar</strong> tus
-            tareas según su prioridad:
-          </text>
-            <ul className="text-xl font-medium">
-              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
-            </ul>
-        </div>
-        <div className="flex w-[50%] flex-col gap-7">
-          <TerminalComponent>
-            <Image
-              src={StellarTaks}
-              draggable={false}
-              alt="Stellar Tasks"
-              width={800}
-              height={400}
-              className="rounded-xl"
-            />
-          </TerminalComponent>
-        </div>
-      </section>
+      {features.map((feature, index) => (
+  <FeatureComponent key={index} side={feature.side} image={feature.image}>
+    <h3 className="text-strong-blue font-medium text-3xl text-center">
+      <strong className="text-light-blue">{feature.title.split(' ')[0]}</strong> {feature.title.split(' ').slice(1).join(' ')}
+    </h3>
+    <ul className="text-xl font-medium">
+      {feature.description.map((desc, i) => {
+        const words = desc.split(' ');
+        const urgencyWord = words.pop();
+        const sentence = words.join(' ');
 
-      <section className="flex flex-col md:flex-row w-full justify-between items-center lg:px-32 p-3 mt-10">
-      <div className="hidden md:flex w-[50%] flex-col gap-7">
-          <TerminalComponent>
-            <Image
-              src={StellarCalendar}
-              draggable={false}
-              alt="Stellar Calendar"
-              width={800}
-              height={400}
-              className="rounded-xl"
-            />
-          </TerminalComponent>
-        </div>
-      <div className="flex flex-col gap-4">
-          <text className="text-strong-blue  font-medium text-3xl text-center">
-            <strong className="text-light-blue">Organizar</strong> tus
-            semanas, según las tareas
-          </text>
-            <ul className="text-xl font-medium">
-              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
-            </ul>
-        </div>
-        <div className="flex md:hidden w-[40%] flex-col gap-7">
-          <TerminalComponent>
-            <Image
-              src={StellarCalendar}
-              draggable={false}
-              alt="Stellar Calendar"
-              width={800}
-              height={400}
-              className="rounded-xl"
-            />
-          </TerminalComponent>
-        </div>
-      </section>
+        return (
+          <li key={i}>
+            {sentence}{' '}
+            <strong
+              className={`text-${
+                urgencyWord === 'Alta'
+                  ? 'light-red'
+                  : urgencyWord === 'Media'
+                  ? 'light-yellow'
+                  : 'light-green'
+              }`}
+            >
+              {urgencyWord}
+            </strong>
+          </li>
+        );
+      })}
+    </ul>
+  </FeatureComponent>
+))}
 
-      <section className="flex flex-col md:flex-row w-full justify-between items-center px-3 md:px-32 p-3 mt-10">
-      <div className="flex flex-col gap-4">
-          <text className="text-strong-blue  font-medium text-3xl text-center">
-            <strong className="text-light-blue">Obtener </strong>
-            medallas, con progreso
-          </text>
-            <ul className="text-xl font-medium">
-              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
-            </ul>
-        </div>
-        <div className="flex w-[50%] flex-col gap-7">
-          <TerminalComponent>
-            <Image
-              src={Medals}
-              draggable={false}
-              alt="Stellar Tasks"
-              width={800}
-              height={400}
-              className="rounded-xl"
-            />
-          </TerminalComponent>
-        </div>
-      </section>
     </>
   );
 }

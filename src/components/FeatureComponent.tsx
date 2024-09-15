@@ -1,12 +1,7 @@
 import React from "react";
 import TerminalComponent from "./TerminalComponent";
 import Image from "next/image";
-
-interface FeatureProps {
-  side: string;
-  children: React.ReactNode;
-  image: string;
-}
+import { FeatureProps } from "@/interfaces/interfaces";
 
 export default function FeatureComponent({
   side,
