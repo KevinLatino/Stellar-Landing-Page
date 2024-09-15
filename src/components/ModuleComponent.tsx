@@ -9,20 +9,17 @@ const modules: ModuleInterface[] = [
     },
     {
         title: "Técnica Pomodoro",
-        description:
-            "Esta técnica nos dice que podemos trabajar durante intervalos de tiempo concentrados, y luego tomar breves descansos.",
+        description: "Esta técnica nos dice que podemos trabajar durante intervalos de tiempo concentrados, y luego tomar breves descansos.",
         borderColor: ModuleColor.green,
     },
     {
         title: "Prácticas de Mindfulness",
-        description:
-            "Nos ayuda a incorporar técnicas de mindfulness para mejorar el enfoque y reducir el estrés.",
+        description:"Nos ayuda a incorporar técnicas de mindfulness para mejorar el enfoque y reducir el estrés.",
         borderColor: ModuleColor.blue,
     },
     {
         title: "Establecimiento de metas claras",
-        description:
-            "Nos enseña que establecer metas claras de manera diaria es fundamental para mantener la motivación.",
+        description:"Nos enseña que establecer metas claras de manera diaria es fundamental para mantener la motivación.",
         borderColor: ModuleColor.purple,
     },
 ];

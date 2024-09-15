@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import StellarLogo from '@/assets/Stellar-NavBar.svg';
 import { NavBarInterface } from '@/interfaces/interfaces';
+import Link from "next/link";
 
 const navItems: NavBarInterface[] = [
-  { title: "Módulos", url: "#modulos" },
-  { title: "Opiniones",  url: "#opiniones" },
-  { title: "Funcionalidades", url: "#funcionalidades" },
+  { title: "Módulos", url: "#modules" },
+  { title: "Opiniones", url: "#opinions" },
+  { title: "Funcionalidades", url: "#functionalities" },
   { title: "Contacto", url: "latinkevin9@gmail.com" },
 ];
 
@@ -31,17 +32,18 @@ const NavBarComponent = () => {
         <Image
           src={StellarLogo}
           alt="Logo"
-          className={`transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`} 
+          className={`transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`}
         />
 
         <div className={`flex space-x-4 transition-all duration-200 ${isScrolled ? "text-[15px]" : "text-lg"}`}>
           {navItems.map(({ title, url }: NavBarInterface) => (
-            <a
+            <Link
+              key={title}
               className={`relative block px-2 py-2 ${isScrolled ? "hover:text-blue-500 dark:hover:text-blue-500" : "text-gray-600"}`}
               href={url}
             >
               {title}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>

@@ -11,7 +11,6 @@ import StellarResource from '@/assets/Stellar-Resource.svg'
 
 export default function Home() {
 
-
   const features  = [
     {
       side: 'right',
@@ -68,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-[6rem] flex flex-col gap-6">
+      <section id='modules' className="mt-[6rem] flex flex-col gap-6">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
           ¡<strong className="text-light-blue">Aprende</strong> sobre los módulos más importantes para mejorar tu{" "}
           <strong className="text-light-blue">productividad</strong>!
@@ -76,7 +75,7 @@ export default function Home() {
         <ModuleComponent />
       </section>
 
-      <section className="mt-[6rem]">
+      <section id='opinions' className="mt-[6rem]">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
           <strong className="text-light-blue">Opiniones</strong> de estudiantes que han probado la versión beta de {" "}
           <strong className="text-light-blue">Stellar</strong>.
@@ -86,7 +85,7 @@ export default function Home() {
         </article>
       </section>
 
-      <h2 className="text-3xl text-center mb-10 font-medium">
+      <h2 id='functionalities' className="text-3xl text-center mb-10 font-medium">
         Con <strong className="text-light-blue">Stellar</strong> tienes los siguientes beneficios:
       </h2>
 
