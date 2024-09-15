@@ -21,9 +21,9 @@ const NavBarComponent = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 z-10 w-full mx-auto ${isScrolled ? "mt-2" : "mt-4"}`}>
+    <header className={`fixed top-0 z-10 w-full mx-auto ${isScrolled ? "mt-2" : "mt-7"}`}>
       <nav
-        className={`flex items-center justify-center gap-${isScrolled ? '[1rem]' : '[40rem]'} text-[16px] font-medium rounded-full 
+        className={`flex items-center justify-center ${isScrolled ? "gap-[1rem]" : "gap-[40rem]"} text-[16px] font-medium rounded-full 
           ${isScrolled ? "text-gray-600 dark:text-gray-200 bg-white/50 shadow-lg ring-1 backdrop-blur ring-white/10" : ""}
           max-w-xl mx-auto`}
       >
@@ -33,7 +33,7 @@ const NavBarComponent = () => {
           className={`transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`} 
         />
 
-        <div className={`flex space-x-4 transition-all duration-200 ${isScrolled ? "text-sm" : "text-lg"}`}>
+        <div className={`flex space-x-4 transition-all duration-200 ${isScrolled ? "text-[15px]" : "text-lg"}`}>
           {navItems.map(({ title, label, url }) => (
             <a
               key={label}
