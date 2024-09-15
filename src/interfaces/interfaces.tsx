@@ -35,5 +35,8 @@ export interface ModuleProps {
     module: ModuleInterface
 }
 
-
+export interface NavBarInterface {
+    title: string,
+    url: string
+}
 

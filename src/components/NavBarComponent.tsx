@@ -2,12 +2,13 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import StellarLogo from '@/assets/Stellar-NavBar.svg';
+import { NavBarInterface } from '@/interfaces/interfaces';
 
-const navItems = [
-  { title: "Módulos", label: "experiencia", url: "/#experiencia" },
-  { title: "Opiniones", label: "proyectos", url: "/#proyectos" },
-  { title: "Funcionalidades", label: "sobre", url: "/#sobre-mi" },
-  { title: "Contacto", label: "contacto", url: "mailto:miduga@gmail.com" },
+const navItems: NavBarInterface[] = [
+  { title: "Módulos", url: "#modulos" },
+  { title: "Opiniones",  url: "#opiniones" },
+  { title: "Funcionalidades", url: "#funcionalidades" },
+  { title: "Contacto", url: "latinkevin9@gmail.com" },
 ];
 
 const NavBarComponent = () => {
@@ -34,11 +35,9 @@ const NavBarComponent = () => {
         />
 
         <div className={`flex space-x-4 transition-all duration-200 ${isScrolled ? "text-[15px]" : "text-lg"}`}>
-          {navItems.map(({ title, label, url }) => (
+          {navItems.map(({ title, url }: NavBarInterface) => (
             <a
-              key={label}
               className={`relative block px-2 py-2 ${isScrolled ? "hover:text-blue-500 dark:hover:text-blue-500" : "text-gray-600"}`}
-              aria-label={label}
               href={url}
             >
               {title}
