@@ -1,3 +1,4 @@
+"use client"
 import StellarTaks from '@/assets/Tasks.png'
 import Image from "next/image";
 import ShimmerButton from "@/components/magicui/shimmer-button";
