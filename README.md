@@ -4,7 +4,7 @@ Welcome to Stellar's Landing Page! Stellar is a web application created to help 
 
 
 ##  Check out what Stellar offers 👀 ##
-stellar-landing-page.vercel.app
+<a>https://stellar-landing-page.vercel.app/</a>
 
 <p align="left">• A place where you can organize your tasks. <br><br>
 • learn methods to improve people productivity. <br><br>
