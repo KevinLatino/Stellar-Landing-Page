@@ -7,34 +7,11 @@ import TerminalComponent from "@/components/TerminalComponent";
 import MockUp from "@/assets/macbook.svg";
 import StellarCalendar from "@/assets/Calendar.png"
 import Medals from "@/assets/Medals.png"
+import ModuleComponent from "@/components/ModuleComponent";
+import StellarResource from '@/assets/Stellar-Resource.svg'
 
 export default function Home() {
 
-  const modules: ModuleInterface[] = [
-    {
-      title: "La matriz de Eisenhower",
-      description: "Es un método importante debido a que te enseña a clasificar las tareas según su urgencia e importancia.",
-      borderColor: ModuleColor.yellow,
-    },
-    {
-      title: "Técnica Pomodoro",
-      description:
-        "Esta técnica nos dice que podemos trabajar durante intervalos de tiempo concentrados, y luego tomar breves descansos.",
-      borderColor: ModuleColor.green,
-    },
-    {
-      title: "Prácticas de Mindfulness",
-      description:
-        "Nos ayuda a incorporar técnicas de mindfulness para mejorar el enfoque y reducir el estrés.",
-      borderColor: ModuleColor.blue,
-    },
-    {
-      title: "Establecimiento de metas claras",
-      description:
-        "Nos enseña que establecer metas claras de manera diaria es fundamental para mantener la motivación.",
-      borderColor: ModuleColor.purple,
-    },
-  ];
 
   return (
     <>
@@ -64,48 +41,34 @@ export default function Home() {
           ¡<strong className="text-light-blue">Aprende</strong> sobre los módulos más importantes para mejorar tu{" "}
           <strong className="text-light-blue">productividad</strong>!
         </h2>
-        <ul className="flex flex-wrap gap-x-20 gap-y-14 mt-10 justify-center">
-          {modules.map((module, index) => (
-            <li
-              key={index}
-              className={` border-l-4  pl-4 max-w-xl ${module.borderColor}`}
-            >
-              <h3 className="text-xl text-strong-blue font-semibold">
-                {module.title}
-              </h3>
-              <p className="text-[17px] mt-1 text-gray-600">
-                {module.description}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <ModuleComponent />
       </section>
 
       <section className="mt-[6rem]">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
           <strong className="text-light-blue">Opiniones</strong> de estudiantes que han probado la versión beta de {" "}
-          <strong className="text-light-blue">Stellar.</strong>
+          <strong className="text-light-blue">Stellar</strong>.
         </h2>
         <article>
           <MarqueeDemo />
         </article>
       </section>
 
-      <h2 className="text-5xl text-center mb-10">
-        Con           <strong className="text-light-blue">Stellar</strong> puedes :
+      <h2 className="text-3xl text-center mb-10 font-medium">
+        Con <strong className="text-light-blue">Stellar</strong> tienes los siguientes beneficios:
       </h2>
 
       <section className="flex flex-col md:flex-row w-full justify-between items-center md:px-32 p-3 mt-10">
-      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
           <text className="text-strong-blue  font-medium text-3xl text-center">
             <strong className="text-light-blue">Clasificar</strong> tus
             tareas según su prioridad:
           </text>
-            <ul className="text-xl font-medium">
-              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
-            </ul>
+          <ul className="text-xl font-medium">
+            <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
+            <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
+            <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
+          </ul>
         </div>
         <div className="flex w-[50%] flex-col gap-7">
           <TerminalComponent>
@@ -122,7 +85,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col md:flex-row w-full justify-between items-center lg:px-32 p-3 mt-10">
-      <div className="hidden md:flex w-[50%] flex-col gap-7">
+        <div className="hidden md:flex w-[50%] flex-col gap-7">
           <TerminalComponent>
             <Image
               src={StellarCalendar}
@@ -134,16 +97,16 @@ export default function Home() {
             />
           </TerminalComponent>
         </div>
-      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
           <text className="text-strong-blue  font-medium text-3xl text-center">
             <strong className="text-light-blue">Organizar</strong> tus
             semanas, según las tareas
           </text>
-            <ul className="text-xl font-medium">
-              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
-            </ul>
+          <ul className="text-xl font-medium">
+            <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
+            <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
+            <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
+          </ul>
         </div>
         <div className="flex md:hidden w-[40%] flex-col gap-7">
           <TerminalComponent>
@@ -160,16 +123,16 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col md:flex-row w-full justify-between items-center px-3 md:px-32 p-3 mt-10">
-      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
           <text className="text-strong-blue  font-medium text-3xl text-center">
             <strong className="text-light-blue">Obtener </strong>
             medallas, con progreso
           </text>
-            <ul className="text-xl font-medium">
-              <li>Tareas con urgencia <strong className="text-light-red">Alta</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-yellow">Media</strong></li>
-              <li>Tareas con urgencia <strong className="text-light-green">Baja</strong></li>
-            </ul>
+          <ul className="text-xl font-medium">
+            <li>Tareas con <strong className="text-light-red">urgencia Alta</strong></li>
+            <li>Tareas con <strong className="text-light-yellow">urgencia Media</strong></li>
+            <li>Tareas con  <strong className="text-light-green">urgencia Baja</strong></li>
+          </ul>
         </div>
         <div className="flex w-[50%] flex-col gap-7">
           <TerminalComponent>
