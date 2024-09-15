@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="flex flex-col md:flex-row w-full mt-18 justify-evenly items-center">
+      <section className="flex flex-col md:flex-row w-full mt-[4rem] justify-evenly items-center">
         <div className="flex w-[40%] flex-col gap-7">
           <h1 className="text-strong-blue  font-medium text-3xl text-center">
             Con <strong className="text-light-blue">Stellar</strong> ¡Nunca
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id='modules' className="mt-[6rem] flex flex-col gap-6">
+      <section id='modules' className="mt-[11rem] flex flex-col gap-6">
         <h2 className="text-3xl text-center font-medium text-strong-blue">
           ¡<strong className="text-light-blue">Aprende</strong> sobre los módulos más importantes para mejorar tu{" "}
           <strong className="text-light-blue">productividad</strong>!
