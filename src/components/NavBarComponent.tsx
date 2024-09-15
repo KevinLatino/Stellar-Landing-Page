@@ -7,7 +7,7 @@ const navItems = [
   { title: "Módulos", label: "experiencia", url: "/#experiencia" },
   { title: "Opiniones", label: "proyectos", url: "/#proyectos" },
   { title: "Funcionalidades", label: "sobre", url: "/#sobre-mi" },
-  { title: "Contacto", label: "contacto", url: "latinokevin9@gmail.com" },
+  { title: "Contacto", label: "contacto", url: "mailto:miduga@gmail.com" },
 ];
 
 const NavBarComponent = () => {
@@ -23,8 +23,8 @@ const NavBarComponent = () => {
   return (
     <header className={`fixed top-0 z-10 w-full mx-auto ${isScrolled ? "mt-2" : "mt-4"}`}>
       <nav
-        className={`flex items-center justify-center gap-[40rem] text-[16px] font-medium rounded-full 
-          ${isScrolled ? "gap-[1rem] px-3 text-gray-600 dark:text-gray-200 bg-white/50 shadow-lg ring-1 backdrop-blur ring-white/10" : ""}
+        className={`flex items-center justify-center gap-${isScrolled ? '[1rem]' : '[40rem]'} text-[16px] font-medium rounded-full 
+          ${isScrolled ? "text-gray-600 dark:text-gray-200 bg-white/50 shadow-lg ring-1 backdrop-blur ring-white/10" : ""}
           max-w-xl mx-auto`}
       >
         <Image
