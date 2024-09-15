@@ -13,8 +13,8 @@ Welcome to Stellar's Landing Page! Stellar is a web application created to help 
 
 ## Tech Stack 🧬 🌌 ##
 <div align="left">
-<img src="https://github.com/user-attachments/assets/6973e048-990c-41e0-b58a-2b3dc2b0b138" width="40"/>&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/user-attachments/assets/96864062-4310-44f8-be63-e81875105950" width="40"/>&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/user-attachments/assets/6973e048-990c-41e0-b58a-2b3dc2b0b138" width="40"/>&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/user-attachments/assets/480d8665-063d-4c96-998a-c5714c6b0b6c" width="52"/>&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/user-attachments/assets/e61f2d81-78b3-4604-8f98-5a066901eb97" width="38"/>
 </div>
