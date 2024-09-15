@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## <img src="https://github.com/user-attachments/assets/84706774-009a-4879-aa7c-cc874fd540eb" width="230">  ##
 
-## Getting Started
+Welcome to Stellar's Landing Page! Stellar is a web application created to help students manage their tasks in an interactive way, With Stellar you can learn different ways to improve your personal productivity. 📚🌠🎖️
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+##  Check out what Stellar offers 👀 ##
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="left">• A place where you can organize your tasks. <br><br>
+• learn methods to improve people productivity. <br><br>
+• Receive medals depending on your process. <br><br>
+• Have graphics that guide you to improve your productivity. <br><br>
+• A calendar where you can see your deadlines. <br><br> 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack 🧬 🌌 ##
+<div align="left">
+<img src="https://github.com/user-attachments/assets/6973e048-990c-41e0-b58a-2b3dc2b0b138" width="40"/>&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/user-attachments/assets/96864062-4310-44f8-be63-e81875105950" width="40"/>&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/user-attachments/assets/480d8665-063d-4c96-998a-c5714c6b0b6c" width="52"/>&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/user-attachments/assets/e61f2d81-78b3-4604-8f98-5a066901eb97" width="38"/>
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Just a Dashboard ScreenShot 📷 ## 
 
-## Learn More
+<img src="https://github.com/user-attachments/assets/38fa90ad-7475-4c08-8578-ef90da4ee776" width="800" />
 
-To learn more about Next.js, take a look at the following resources:
+## Just a video of Tasks Screen 📽️ ##
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<video src="https://github.com/user-attachments/assets/dfa9e867-5267-4371-8fda-062ed276f7a6" width="600" />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

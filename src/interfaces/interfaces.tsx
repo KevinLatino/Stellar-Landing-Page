@@ -29,8 +29,8 @@ export interface FeatureProps {
     side: string;
     children: React.ReactNode;
     image: StaticImageData;
-  }
+}
 
-export interface ModuleProps{
-        module:ModuleInterface
+export interface ModuleProps {
+    module: ModuleInterface
 }

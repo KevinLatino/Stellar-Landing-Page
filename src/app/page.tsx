@@ -1,4 +1,3 @@
-import { ModuleInterface, ModuleColor, FeatureProps } from "@/interfaces/interfaces";
 import StellarTaks from '@/assets/Tasks.png'
 import Image from "next/image";
 import ShimmerButton from "@/components/magicui/shimmer-button";
@@ -7,14 +6,13 @@ import MockUp from "@/assets/macbook.svg";
 import StellarCalendar from "@/assets/Calendar.png"
 import Medals from "@/assets/Medals.png";
 import FeatureComponent from "@/components/FeatureComponent";
-
-import ModuleComponent from "@/components/ModuleComponent";
+import ModuleComponent from "@/components/ModuleComponent"; 
 import StellarResource from '@/assets/Stellar-Resource.svg'
 
 export default function Home() {
 
 
-  const features = [
+  const features  = [
     {
       side: 'right',
       title: 'Clasificar tus tareas según su prioridad:',
@@ -25,9 +23,9 @@ export default function Home() {
       ],
       image: StellarTaks,
     },
-    { 
+    {
       side: 'left',
-      title: 'Organizar tus semanas, según las tareas',
+      title: 'Visualiza tus semanas, según tus tareas.',
       description: [
         'Tareas con urgencia Alta',
         'Tareas con urgencia Media',
@@ -37,11 +35,11 @@ export default function Home() {
     },
     {
       side: 'right',
-      title: 'Obtener medallas, con progreso',
+      title: 'Consigue medallas, mientras aprendes',
       description: [
-        'Tareas con urgencia Alta',
-        'Tareas con urgencia Media',
-        'Tareas con urgencia Baja',
+        'Aprende los métodos más efectivos',
+        'Completa los tests mientras aprendes',
+        'Gana increíbles medallas',
       ],
       image: Medals,
     },
@@ -93,36 +91,34 @@ export default function Home() {
       </h2>
 
       {features.map((feature, index) => (
-  <FeatureComponent key={index} side={feature.side} image={feature.image}>
-    <h3 className="text-strong-blue font-medium text-3xl text-center">
-      <strong className="text-light-blue">{feature.title.split(' ')[0]}</strong> {feature.title.split(' ').slice(1).join(' ')}
-    </h3>
-    <ul className="text-xl font-medium">
-      {feature.description.map((desc, i) => {
-        const words = desc.split(' ');
-        const urgencyWord = words.pop();
-        const sentence = words.join(' ');
+        <FeatureComponent key={index} side={feature.side} image={feature.image}>
+          <h3 className="text-strong-blue font-medium text-3xl text-center">
+            <strong className="text-light-blue">{feature.title.split(' ')[0]}</strong> {feature.title.split(' ').slice(1).join(' ')}
+          </h3>
+          <ul className="text-xl font-medium">
+            {feature.description.map((desc, i) => {
+              const words = desc.split(' ');
+              const urgencyWord = words.pop();
+              const sentence = words.join(' ');
 
-        return (
-          <li key={i}>
-            {sentence}{' '}
-            <strong
-              className={`text-${
-                urgencyWord === 'Alta'
-                  ? 'light-red'
-                  : urgencyWord === 'Media'
-                  ? 'light-yellow'
-                  : 'light-green'
-              }`}
-            >
-              {urgencyWord}
-            </strong>
-          </li>
-        );
-      })}
-    </ul>
-  </FeatureComponent>
-))}
+              return (
+                <li key={i}>
+                  {sentence}{' '}
+                  <strong
+                    className={`text-${urgencyWord === 'Alta' ? 'light-red'
+                        : urgencyWord === 'Media' ? 'light-yellow'
+                         : urgencyWord === "Baja" ? 'light-green' : "light-blue"
+                          
+                      }`}
+                  >
+                    {urgencyWord}
+                  </strong>
+                </li>
+              );
+            })}
+          </ul>
+        </FeatureComponent>
+      ))}
 
     </>
   );
