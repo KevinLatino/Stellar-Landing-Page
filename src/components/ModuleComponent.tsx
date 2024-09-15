@@ -1,4 +1,4 @@
-import { ModuleInterface } from "@/interfaces/interfaces";
+import { ModuleInterface, ModuleProps } from "@/interfaces/interfaces";
 import { ModuleColor } from "@/interfaces/interfaces";
 
 const modules: ModuleInterface[] = [
@@ -31,18 +31,23 @@ export default function ModuleComponent() {
     return (
         <ul className="flex flex-wrap gap-x-20 gap-y-14 mt-10 justify-center">
             {modules.map((module, index) => (
-                <li
-                    key={index}
-                    className={` border-l-4  pl-4 max-w-xl ${module.borderColor}`}
-                >
-                    <h3 className="text-xl text-strong-blue font-semibold">
-                        {module.title}
-                    </h3>
-                    <p className="text-[17px] mt-1 text-gray-600">
-                        {module.description}
-                    </p>
-                </li>
+                <Module key={index} module={module} />
             ))}
         </ul>
+    )
+}
+
+function Module({ module }:ModuleProps){
+    return(
+        <li
+        className={` border-l-4  pl-4 max-w-xl ${module.borderColor}`}
+    >
+        <h3 className="text-xl text-strong-blue font-semibold">
+            {module.title}
+        </h3>
+        <p className="text-[17px] mt-1 text-gray-600">
+            {module.description}
+        </p>
+    </li>
     )
 }
