@@ -29,11 +29,17 @@ const NavBarComponent = () => {
           ${isScrolled ? "text-gray-600 dark:text-gray-200 bg-white/50 shadow-lg ring-1 backdrop-blur ring-white/10" : ""}
           max-w-xl mx-auto`}
       >
+        {/* <Link
+        href="#"
+        className={`transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`}
+        > */}
         <Image
           src={StellarLogo}
           alt="Logo"
-          className={`transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`}
+          className={`cursor-pointer transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`}
+          onClick={()=>window.location.href = "/#"}
         />
+        {/* </Link> */}
 
         <div className={`flex space-x-4 transition-all duration-200 ${isScrolled ? "text-[15px]" : "text-lg"}`}>
           {navItems.map(({ title, url }: NavBarInterface) => (
