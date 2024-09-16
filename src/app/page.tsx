@@ -95,7 +95,7 @@ export default function Home() {
             <h3 className="text-strong-blue font-medium text-3xl text-center">
               <strong className="text-light-blue">{feature.title.split(' ')[0]}</strong> {feature.title.split(' ').slice(1).join(' ')}
             </h3>
-            <ul className="text-xl font-medium">
+            <ul className="text-xl">
               {feature.description.map((desc, i) => {
                 const words = desc.split(' ');
                 const urgencyWord = words.pop();

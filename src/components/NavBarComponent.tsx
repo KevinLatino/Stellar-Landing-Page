@@ -52,11 +52,11 @@ const NavBarComponent = () => {
         <Image
           src={StellarLogo}
           alt="Logo"
-          className={`cursor-pointer transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`}
+          className={`cursor-pointer transition-all duration-200 ${isScrolled ? "h-[3.1rem] w-auto" : "h-[5rem] w-auto"}`}
           onClick={() => (window.location.href = "/#")}
         />
 
-        <div className={`flex transition-all duration-200 ${isScrolled ? "text-[16.5px]" : "text-lg"}`}>
+        <div className={`flex transition-all duration-200 ${isScrolled ? "text-[17.5px]" : "text-lg"}`}>
           {navItems.map(({ title, url }: NavBarInterface) => (
             <Link
               key={title}
