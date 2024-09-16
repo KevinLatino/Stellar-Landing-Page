@@ -7,11 +7,11 @@ import MockUp from "@/assets/macbook.svg";
 import StellarCalendar from "@/assets/Calendar.png"
 import Medals from "@/assets/Medals.png";
 import FeatureComponent from "@/components/FeatureComponent";
-import ModuleComponent from "@/components/ModuleComponent"; 
+import ModuleComponent from "@/components/ModuleComponent";
 
 export default function Home() {
 
-  const features  = [
+  const features = [
     {
       side: 'right',
       title: 'Clasificar tus tareas según su prioridad:',
@@ -85,43 +85,46 @@ export default function Home() {
         </article>
       </section>
 
-      <h2 id='functionalities' className="text-3xl text-center mb-10 font-medium">
-        Con <strong className="text-light-blue">Stellar</strong> tienes los siguientes beneficios:
-      </h2>
 
-      {features.map((feature, index) => (
-        <FeatureComponent key={index} side={feature.side} image={feature.image}>
-          <h3 className="text-strong-blue font-medium text-3xl text-center">
-            <strong className="text-light-blue">{feature.title.split(' ')[0]}</strong> {feature.title.split(' ').slice(1).join(' ')}
-          </h3>
-          <ul className="text-xl font-medium">
-            {feature.description.map((desc, i) => {
-              const words = desc.split(' ');
-              const urgencyWord = words.pop();
-              const sentence = words.join(' ');
+      <section  id='functionalities' className='mb-10'>
+        <h2 className="text-3xl text-center font-medium">
+          Con <strong className="text-light-blue">Stellar</strong> tienes los siguientes beneficios:
+        </h2>
 
-              return (
-                <li key={i}>
-                  {sentence}{' '}
-                  <strong
-              className={
-                urgencyWord === "Alta"
-                  ? "text-light-red"
-                  : urgencyWord === "Media"
-                  ? "text-light-yellow"
-                  : urgencyWord === "Baja"
-                  ? "text-light-green"
-                  : "text-light-blue"
-              }
-                  >
-                    {urgencyWord}
-                  </strong>
-                </li>
-              );
-            })}
-          </ul>
-        </FeatureComponent>
-      ))}
+        {features.map((feature, index) => (
+          <FeatureComponent key={index} side={feature.side} image={feature.image}>
+            <h3 className="text-strong-blue font-medium text-3xl text-center">
+              <strong className="text-light-blue">{feature.title.split(' ')[0]}</strong> {feature.title.split(' ').slice(1).join(' ')}
+            </h3>
+            <ul className="text-xl font-medium">
+              {feature.description.map((desc, i) => {
+                const words = desc.split(' ');
+                const urgencyWord = words.pop();
+                const sentence = words.join(' ');
+
+                return (
+                  <li key={i}>
+                    {sentence}{' '}
+                    <strong
+                      className={
+                        urgencyWord === "Alta"
+                          ? "text-light-red"
+                          : urgencyWord === "Media"
+                            ? "text-light-yellow"
+                            : urgencyWord === "Baja"
+                              ? "text-light-green"
+                              : "text-light-blue"
+                      }
+                    >
+                      {urgencyWord}
+                    </strong>
+                  </li>
+                );
+              })}
+            </ul>
+          </FeatureComponent>
+        ))}
+      </section>
 
     </>
   );

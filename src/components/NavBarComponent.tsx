@@ -9,17 +9,45 @@ const navItems: NavBarInterface[] = [
   { title: "Módulos", url: "#modules" },
   { title: "Opiniones", url: "#opinions" },
   { title: "Funcionalidades", url: "#functionalities" },
-  { title: "Contacto", url: "latinkevin9@gmail.com" },
+  { title: "Contacto", url: "#contact" },
 ];
 
 const NavBarComponent = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 0);
-
     window.addEventListener("scroll", handleScroll);
+
+    // Cleanup on component unmount
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null, // viewport
+      rootMargin: '0px',
+      threshold: 0.6, // 60% of the section is visible
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          setActiveSection(`#${sectionId}`);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe each section
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => observer.observe(section));
+
+    // Cleanup the observer on component unmount
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -33,14 +61,15 @@ const NavBarComponent = () => {
           src={StellarLogo}
           alt="Logo"
           className={`cursor-pointer transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`}
-          onClick={()=>window.location.href = "/#"}
+          onClick={() => window.location.href = "/#"}
         />
 
-        <div className={`flex  transition-all duration-200 ${isScrolled ? "text-[17px]" : "text-lg"}`}>
+        <div className={`flex transition-all duration-200 ${isScrolled ? "text-[16.5px]" : "text-lg"}`}>
           {navItems.map(({ title, url }: NavBarInterface) => (
             <Link
               key={title}
-              className={`relative  hover:text-blue-500 block px-2 py-2 ${isScrolled ? "hover:text-blue-500" : "text-gray-600"}`}
+              className={`relative block px-2 py-2 ${activeSection === url ? "text-blue-500" : "text-gray-600"} 
+                hover:text-blue-500 transition-all`}
               href={url}
             >
               {title}
