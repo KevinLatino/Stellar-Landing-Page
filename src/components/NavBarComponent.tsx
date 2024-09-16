@@ -1,54 +1,46 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import StellarLogo from '@/assets/Stellar-NavBar.svg';
-import { NavBarInterface } from '@/interfaces/interfaces';
+import StellarLogo from "@/assets/Stellar-NavBar.svg";
+import { NavBarInterface } from "@/interfaces/interfaces";
 import Link from "next/link";
 
 const navItems: NavBarInterface[] = [
   { title: "Módulos", url: "#modules" },
   { title: "Opiniones", url: "#opinions" },
   { title: "Funcionalidades", url: "#functionalities" },
-  { title: "Contacto", url: "#contact" },
+  { title: "Contacto", url: "latinkevin9@gmail.com" },
 ];
 
 const NavBarComponent = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 0);
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup on component unmount
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
-    const observerOptions = {
-      root: null, // viewport
-      rootMargin: '0px',
-      threshold: 0.6, // 60% of the section is visible
-    };
-
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id;
-          setActiveSection(`#${sectionId}`);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+  
+      const sections = ["modules", "opinions", "functionalities"];
+      const offset = 400; 
+  
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight - offset && rect.bottom >= offset;
+  
+          if (isVisible) {
+            setActiveSection(section);
+          }
         }
       });
     };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Observe each section
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => observer.observe(section));
-
-    // Cleanup the observer on component unmount
-    return () => observer.disconnect();
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  ;
 
   return (
     <header className={`fixed top-0 z-10 w-full mx-auto ${isScrolled ? "mt-2" : "mt-8"}`}>
@@ -61,15 +53,16 @@ const NavBarComponent = () => {
           src={StellarLogo}
           alt="Logo"
           className={`cursor-pointer transition-all duration-200 ${isScrolled ? "h-[3rem] w-auto" : "h-[5rem] w-auto"}`}
-          onClick={() => window.location.href = "/#"}
+          onClick={() => (window.location.href = "/#")}
         />
 
         <div className={`flex transition-all duration-200 ${isScrolled ? "text-[16.5px]" : "text-lg"}`}>
           {navItems.map(({ title, url }: NavBarInterface) => (
             <Link
               key={title}
-              className={`relative block px-2 py-2 ${activeSection === url ? "text-blue-500" : "text-gray-600"} 
-                hover:text-blue-500 transition-all`}
+              className={`relative hover:text-blue-500 block px-2 py-2 ${
+                activeSection === url.slice(1) ? "text-blue-500" : "text-gray-600"
+              }`}
               href={url}
             >
               {title}

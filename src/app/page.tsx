@@ -24,11 +24,11 @@ export default function Home() {
     },
     {
       side: 'left',
-      title: 'Visualiza tus semanas, según tus tareas.',
+      title: 'Visualiza tu calendario, organizate mejor.',
       description: [
-        'Tareas con urgencia Alta',
-        'Tareas con urgencia Media',
-        'Tareas con urgencia Baja',
+        'Puedes ver tus deberes por semana',
+        'Puedes ver tus deberes de cada mes',
+        'Puedes ver tus deberes de cada año',
       ],
       image: StellarCalendar,
     },
