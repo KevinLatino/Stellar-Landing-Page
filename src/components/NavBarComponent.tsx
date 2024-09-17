@@ -9,7 +9,7 @@ const navItems: NavBarInterface[] = [
   { title: "Módulos", url: "#modules" },
   { title: "Opiniones", url: "#opinions" },
   { title: "Funcionalidades", url: "#functionalities" },
-  { title: "Contacto", url: "latinkevin9@gmail.com" },
+  { title: "Contacto", url: "#contact" },
 ];
 
 const NavBarComponent = () => {
@@ -21,7 +21,7 @@ const NavBarComponent = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
   
-      const sections = ["modules", "opinions", "functionalities"];
+      const sections = ["modules", "opinions", "functionalities", "contact"];
       const offset = 400; 
   
       sections.forEach((section) => {

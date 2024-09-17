@@ -1,12 +1,13 @@
 import StellarTaks from '@/assets/Tasks.png'
 import Image from "next/image";
 import ShimmerButton from "@/components/magicui/shimmer-button";
-import { MarqueeDemo } from "./Marquee";
 import MockUp from "@/assets/macbook.svg";
 import StellarCalendar from "@/assets/Calendar.png"
 import Medals from "@/assets/Medals.png";
 import FeatureComponent from "@/components/FeatureComponent";
 import ModuleComponent from "@/components/ModuleComponent";
+import ContactUs from '@/components/articles/ContactUs';
+import { MarqueeDemo } from "./Marquee";
 
 export default function Home() {
 
@@ -85,7 +86,7 @@ export default function Home() {
       </section>
 
 
-      <section  id='functionalities' className='mb-10'>
+      <section id='functionalities' className='mb-10'>
         <h2 className="text-3xl text-center font-medium">
           Con <strong className="text-light-blue">Stellar</strong> tienes los siguientes beneficios:
         </h2>
@@ -124,6 +125,14 @@ export default function Home() {
           </FeatureComponent>
         ))}
       </section>
+
+      <section id='contact' className='mt-[7rem]'>
+        <h4 className='flex justify-center text-strong-blue font-medium text-[29px]'>
+          <strong className='text-light-blue'>¿Quieres probar Stellar?</strong>&nbsp;Contáctanos y nosotros te ayudamos.
+        </h4>
+        <ContactUs />
+      </section>
+
 
     </>
   );
