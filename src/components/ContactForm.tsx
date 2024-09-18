@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full">
+    <form onSubmit={handleSubmit} className="w-[80%]">
       <Input
         label="Nombre"
         name="name"
@@ -78,11 +78,11 @@ const ContactForm: React.FC = () => {
         required
         id="message"
       />
-      <div className="mt-4">
+      <div className="mt-4 flex justify-center">
         <ShimmerButton
           type="submit"
           disabled={status === 'loading'}
-          className={`w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors ${
+          className={`w-[26%] py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors ${
             status === 'loading' ? 'opacity-50 cursor-not-allowed' : ''
           }`}
         >
