@@ -3,6 +3,11 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
   const { name, email, message } = await req.json();
+  console.log(
+    process.env.EMAIL_USER,
+    process.env.EMAIL_PASS,
+
+  )
 
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -16,12 +21,12 @@ export async function POST(req: Request) {
 
   try {
     await transporter.sendMail({
-      from: `"${name}" <${email}>`, // Remitente
-      to: 'destinatario@example.com', // Correo electrónico de destino
+      from: `"${name}" <${email}>`, 
+      to: 'stellardont@gmail.com', 
       subject: 'Nuevo mensaje desde el formulario de contacto',
-      text: message, // Texto plano del mensaje
+      text: message, 
       html: `<p>Tienes un nuevo mensaje de <b>${name}</b> (<a href="mailto:${email}">${email}</a>):</p>
-             <p>${message}</p>`, // Contenido en HTML
+             <p>${message}</p>`,
     });
 
     return NextResponse.json({ message: 'Correo enviado con éxito' });
