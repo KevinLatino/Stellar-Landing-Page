@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       <section id='contact' className='mt-[7rem]'>
-        <h4 className='flex justify-center text-strong-blue font-medium text-[29px]'>
+        <h4 className='flex flex-col md:flex-row items-center md:justify-center text-strong-blue font-medium text-lg sm:text-3xl md:text-[29px]'>
           <strong className='text-light-blue'>¿Quieres probar Stellar?</strong>&nbsp;Contáctanos y nosotros te ayudamos.
         </h4>
         <ContactUs />
