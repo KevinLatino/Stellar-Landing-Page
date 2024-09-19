@@ -2,23 +2,22 @@
 import React from 'react';
 import ContactForm from '@/components/ContactForm';
 import StellarResource from '@/assets/Stellar-Resource.svg';
-import Image from 'next/image';
-import ShimmerButton from '../magicui/shimmer-button'; // Asegúrate de que ShimmerButton esté correctamente importado
+import Image from 'next/image'; 
 
 const ContactUs: React.FC = () => {
   return (
-    <div className="flex justify-between items-center w-full mt-6 md:mt-24 p-8">
+    <div className="flex justify-center items-center w-full  md:mt-24">
       {/* Sección del Formulario */}
-      <div className="w-full md:w-1/2">
+      <div className="w-1/2 md:w-1/2">
         <ContactForm />
       </div>
       
       {/* Sección de la Imagen */}
-      <div className="w-[40%] hidden md:block">
+      <div className="w-[30%]  hidden md:block">
         <Image
           src={StellarResource}
           alt="Stellar"
-          width={500}
+          width={600}
           height={500}
           className="object-contain"
           draggable={false}
