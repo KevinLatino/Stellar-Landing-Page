@@ -51,51 +51,54 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-[80%]">
-      <Input
-        label="Nombre"
-        name="name"
-        type="text"
-        value={formData.name}
-        onChange={handleChange}
-        required
-        id="name"
-      />
-      <Input
-        label="Correo Electrónico"
-        name="email"
-        type="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-        id="email"
-      />
-      <Textarea
-        label="Mensaje"
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-        id="message"
-      />
-      <div className="mt-4 flex justify-center">
-        <ShimmerButton
-          type="submit"
-          disabled={status === 'loading'}
-          className={`w-[26%] py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors ${
-            status === 'loading' ? 'opacity-50 cursor-not-allowed' : ''
-          }`}
-        >
-          {status === 'loading' ? 'Enviando...' : 'Enviar'}
-        </ShimmerButton>
-      </div>
-      {status === 'success' && (
-        <p className="mt-4 text-green-600">¡Mensaje enviado con éxito!</p>
-      )}
-      {status === 'error' && (
-        <p className="mt-4 text-red-600">Hubo un error al enviar el mensaje.</p>
-      )}
-    </form>
+    <>
+      <h1 className='text-strong-blue text-[22px] mb-4 font-medium'><strong className='text-light-blue'>Completa</strong> el siguiente formulario:</h1>
+      <form onSubmit={handleSubmit} className="w-[80%]">
+        <Input
+          label="Nombre"
+          name="name"
+          type="text"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          id="name"
+        />
+        <Input
+          label="Correo Electrónico"
+          name="email"
+          type="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          id="email"
+        />
+        <Textarea
+          label="Cuéntanos, ¿por qué deseas probar Stellar?"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          id="message"
+        />
+
+        <div className="mt-4 flex justify-center">
+          <ShimmerButton
+            type="submit"
+            disabled={status === 'loading'}
+            className={`w-[26%] py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors ${status === 'loading' ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+          >
+            {status === 'loading' ? 'Enviando...' : 'Enviar'}
+          </ShimmerButton>
+        </div>
+        {status === 'success' && (
+          <p className="mt-4 text-green-600">¡Mensaje enviado con éxito!</p>
+        )}
+        {status === 'error' && (
+          <p className="mt-4 text-red-600">Hubo un error al enviar el mensaje.</p>
+        )}
+      </form>
+    </>
   );
 };
 

@@ -6,18 +6,18 @@ import Image from 'next/image';
 
 const ContactUs: React.FC = () => {
   return (
-    <div className="flex justify-center gap-12 items-center w-full  md:mt-24 p-8">
+    <div className="flex justify-center items-center w-full  md:mt-24">
       {/* Sección del Formulario */}
       <div className="w-1/2 md:w-1/2">
         <ContactForm />
       </div>
       
       {/* Sección de la Imagen */}
-      <div className="w-[40%]  hidden md:block">
+      <div className="w-[30%]  hidden md:block">
         <Image
           src={StellarResource}
           alt="Stellar"
-          width={500}
+          width={600}
           height={500}
           className="object-contain"
           draggable={false}
