@@ -6,7 +6,7 @@ import StellarCalendar from "@/assets/Calendar.png"
 import Medals from "@/assets/Medals.png";
 import FeatureComponent from "@/components/FeatureComponent";
 import ModuleComponent from "@/components/ModuleComponent";
-import ContactUs from '@/components/articles/ContactUs';
+import ContactUs from '@/components/ContactUs';
 import { MarqueeDemo } from "./Marquee";
 
 export default function Home() {

@@ -7,12 +7,10 @@ import Image from 'next/image';
 const ContactUs: React.FC = () => {
   return (
     <div className="flex justify-center items-center w-full  md:mt-24">
-      {/* Sección del Formulario */}
       <div className="w-1/2 md:w-1/2">
         <ContactForm />
       </div>
       
-      {/* Sección de la Imagen */}
       <div className="w-[30%]  hidden md:block">
         <Image
           src={StellarResource}
