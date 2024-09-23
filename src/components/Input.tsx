@@ -13,7 +13,7 @@ const SimpleMinimalInput: React.FC<SimpleMinimalInputProps> = ({ label, id, name
         id={id || name}
         name={name}
         {...inputProps}
-        className="h-12 w-full border-2 focus:border-[#1C3676] rounded-md px-4 py-2 text-gray-900 focus:outline-none transition-all duration-200"
+        className="h-12 w-full border-2 focus::border-[#1C3676] rounded-md px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 transition-all duration-200"
         placeholder={label}
       />
     </div>
